@@ -1,0 +1,9 @@
+streamlit
+polars
+duckdb
+pydantic>=2.0
+requests
+pyarrow
+altair
+plotly
+pandas
