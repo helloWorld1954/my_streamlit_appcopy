@@ -23,7 +23,7 @@ my_app/
 | Page | Description |
 |------|-------------|
 | **Main (app.py)** | Downloads trip data & taxi zone lookup, runs Pydantic validation, applies cleaning filters (nulls, invalid distances/times/fares), engineers features, executes DuckDB summary queries, and displays key metrics. |
-| **Dashboard** | Renders 5 Altair charts (top pickup zones, avg fare by hour, distance distribution, payment types, day × hour heatmap) each with a refined statistical interpretation and an executive summary. |
+| **Dashboard** | Renders 5 Altair charts (top pickup zones, avg fare by hour, distance distribution, payment types, day × hour heatmap) each with a refined statistical interpretation. |
 
 ## Setup Instructions
 
