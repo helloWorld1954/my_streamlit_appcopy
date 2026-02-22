@@ -118,7 +118,6 @@ st.divider()
 # ═══════════════════════════════════════════════════════════════════════════════
 
 st.markdown('<p class="chart-header">1. Top 10 Pick-up Zones by Pickups</p>', unsafe_allow_html=True)
-st.markdown('<p class="chart-sub">Total trip counts per taxi zone — ranked descending</p>', unsafe_allow_html=True)
 
 df1 = q1.rename({c: c.strip() for c in q1.columns}).rename(
     {"Pick-up Zone Name": "pickup_zone"}
@@ -153,7 +152,6 @@ The Upper East Side South and Upper East Side Northzones exhibit the highest pic
 # ═══════════════════════════════════════════════════════════════════════════════
 
 st.markdown('<p class="chart-header">2. Average Fare Amount by Pickup Hour</p>', unsafe_allow_html=True)
-st.markdown('<p class="chart-sub">Conditional expectation E(Fare | Hour) across a 24-hour cycle</p>', unsafe_allow_html=True)
 
 df2 = q2.rename({c: c.strip() for c in q2.columns}).with_columns(
     pl.col("pickup_hour").cast(pl.Int64),
@@ -196,7 +194,7 @@ st.altair_chart(chart2, use_container_width=True)
 
 st.markdown("""
 <div class="interp-box">
-    <div class="interp-label">Refined Interpretation Average fares remain relatively stable throughout the day, with a notable spike between 4 AM and 6 AM. This is likely driven by longer-distance trips (e.g. airport rides) and reduced driver supply during those hours.
+    <div class="interp-label">Refined Interpretation</div> Average fares remain relatively stable throughout the day, with a notable spike between 4 AM and 6 AM. This is likely driven by longer-distance trips (e.g. airport rides) and reduced driver supply during those hours.
 </div>
 """, unsafe_allow_html=True)
 
@@ -306,7 +304,6 @@ with col_right:
 # ═══════════════════════════════════════════════════════════════════════════════
 
 st.markdown('<p class="chart-header">5. Trips by Day of Week and Hour</p>', unsafe_allow_html=True)
-st.markdown('<p class="chart-sub">Temporal demand matrix — darker cells indicate higher trip volume</p>', unsafe_allow_html=True)
 
 df7 = q7.with_columns(
     pl.col("pickup_hour").cast(pl.Int64),
