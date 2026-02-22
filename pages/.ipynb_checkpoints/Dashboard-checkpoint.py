@@ -143,8 +143,13 @@ st.altair_chart(chart1, use_container_width=True)
 
 st.markdown("""
 <div class="interp-box">
-    <div class="interp-label">Refined Interpretation</div>
-The Upper East Side South and Upper East Side Northzones exhibit the highest pickup volumes,reflecting dense residential population, strong commercial activity, and structural reliance on ride-sharing.
+    <div class="interp-label">🔍 Refined Interpretation</div>
+    The <strong>Upper East Side South</strong> and <strong>Upper East Side North</strong> zones exhibit the highest pickup volumes,
+    reflecting dense residential population, strong commercial activity, and structural reliance on ride-sharing.
+    These areas act as <strong>demand anchors</strong> in the marketplace.
+    <div class="interp-sub">Marketplace Implication</div>
+    These zones likely exhibit higher driver utilization, lower idle time, faster match efficiency,
+    and more stable pricing due to consistent liquidity.
 </div>
 """, unsafe_allow_html=True)
 
@@ -196,7 +201,13 @@ st.altair_chart(chart2, use_container_width=True)
 
 st.markdown("""
 <div class="interp-box">
-    <div class="interp-label">Refined Interpretation Average fares remain relatively stable throughout the day, with a notable spike between 4 AM and 6 AM. This is likely driven by longer-distance trips (e.g. airport rides) and reduced driver supply during those hours.
+    <div class="interp-label">🔍 Refined Interpretation</div>
+    Average fares remain relatively stable throughout the day, with a notable <strong>spike between 4 AM and 6 AM</strong>.
+    This is likely driven by longer-distance trips (e.g. airport rides) and reduced driver supply during those hours.
+    The fare spike is not solely driven by demand — it reflects <strong>supply-demand imbalance</strong> and trip composition.
+    <div class="interp-sub">Statistical Insight</div>
+    This reflects variation in the conditional expectation <strong>E(Fare | Hour)</strong>, indicating structural
+    differences in trip characteristics by time of day.
 </div>
 """, unsafe_allow_html=True)
 
@@ -238,8 +249,12 @@ with col_left:
 
     st.markdown("""
     <div class="interp-box">
-        <div class="interp-label">Refined Interpretation</div>
-Most trips are short distance (0–5 miles) with a long right tail representing longer trips.
+        <div class="interp-label">🔍 Refined Interpretation</div>
+        Most trips are <strong>short distance</strong> (0–5 miles) with a long right tail representing longer trips.
+        This is consistent with <strong>log-normal transportation distributions</strong>.
+        <div class="interp-sub">Statistical Insight</div>
+        This implies <strong>Mean > Median > Mode</strong> and reflects heavy-tailed mobility behavior
+        characteristic of urban ride-sharing markets.
     </div>
     """, unsafe_allow_html=True)
 
@@ -296,8 +311,12 @@ with col_right:
 
     st.markdown("""
     <div class="interp-box">
-        <div class="interp-label">Refined Interpretation</div>
-        Credit cards dominate the payment ecosystem,accounting for roughly 80% of transactions Cash and other methods represent a minority share.
+        <div class="interp-label">🔍 Refined Interpretation</div>
+        Credit cards dominate the payment ecosystem, accounting for roughly <strong>80% of transactions</strong>.
+        Cash and other methods represent a minority share.
+        <div class="interp-sub">Operational Insight</div>
+        This enables improved fraud detection, faster payouts, better behavioral tracking,
+        and scalable platform operations.
     </div>
     """, unsafe_allow_html=True)
 
@@ -339,11 +358,14 @@ st.altair_chart(heatmap, use_container_width=True)
 
 st.markdown("""
 <div class="interp-box">
-    <div class="interp-label">Refined Interpretation</div>
-    Demand peaks during weekday evening commute hours (5–7 PM) and is lowest during late-night hours (2–5 AM).
-    Weekend demand is more evenly distributed throughout the day, with later morning start times.
+    <div class="interp-label">🔍 Refined Interpretation</div>
+    Demand peaks during <strong>weekday evening commute hours</strong> (5–7 PM) and is lowest during late-night hours (2–5 AM).
+    Weekend demand is more <strong>evenly distributed</strong> throughout the day, with later morning start times.
     Fare spikes during off-peak hours cannot be ruled out as supply-demand imbalance effects — surge pricing
     is driven by the ratio of demand to supply.
+    <div class="interp-sub">Marketplace Insight</div>
+    Temporal demand patterns reflect <strong>predictable human mobility cycles</strong> and marketplace
+    equilibrium behavior, enabling proactive driver positioning and dynamic pricing strategies.
 </div>
 """, unsafe_allow_html=True)
 
@@ -353,12 +375,16 @@ st.markdown("""
 
 st.divider()
 
-st.markdown('<p class="chart-header">Done By</p>', unsafe_allow_html=True)
+st.markdown('<p class="chart-header">Executive Summary</p>', unsafe_allow_html=True)
 
 st.markdown("""
 <div class="exec-box">
-    Daniel Mangal
-    Assignment (1)
-    COMP3605 - Big Data Analytics
+    The marketplace exhibits <strong>stable spatial, temporal, and behavioral patterns</strong>.
+    Demand clusters in dense zones, follows predictable time cycles, and is dominated by short-distance trips.
+    Fare variation is driven primarily by <strong>supply-demand imbalance</strong> and <strong>trip composition</strong>
+    rather than raw demand volume alone.
+    <br><br>
+    These structural regularities present clear opportunities for <strong>proactive driver allocation,
+    dynamic pricing optimization, and targeted operational efficiency</strong> improvements.
 </div>
 """, unsafe_allow_html=True)
